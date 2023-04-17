@@ -27,6 +27,122 @@
       <link rel="stylesheet" href="assets/css/style.css">
       <!--Responsive css-->
       <link rel="stylesheet" href="assets/css/responsive.css">
+
+      <style media="screen">
+
+
+         #slider {
+           position: relative;
+           width: 50%;
+           height: 32vw;
+           margin: 150px auto;
+           font-family: 'Helvetica Neue', sans-serif;
+           perspective: 1400px;
+           transition: all 750ms ease;
+           
+           transform-style:preserve-3d;
+
+         }
+         
+         input[type=radio] {
+           position: relative;
+           top: 108%;
+           left: 50%;
+           width: 18px;
+           height: 18px;
+           margin: 0 15px 0 0;
+           opacity: 0.4;
+           transform: translateX(-83px);
+           cursor: pointer;
+         }
+         
+         
+         input[type=radio]:nth-child(5) {
+           margin-right: 0px;
+         }
+         
+         input[type=radio]:checked {
+           opacity: 1;
+         }
+         
+         
+         
+         
+         #slider label,
+         #slider label img {
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           left: 0;
+           top: 0;
+           color: white;
+           font-size: 70px;
+           font-weight: bold;
+           border-radius: 3px;
+           cursor: pointer;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           transition: transform 400ms ease;
+         }
+         
+         
+         
+         /* Slider Functionality */
+         
+         /* Active Slide */
+         #s1:checked ~ #slide1,
+          #s2:checked ~ #slide2,
+           #s3:checked ~ #slide3,
+            #s4:checked ~ #slide4,
+             #s5:checked ~ #slide5 {
+           box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+           transform: translate3d(0%, 0, 0px);
+         }
+         
+         /* Next Slide */
+         #s1:checked ~ #slide2,
+          #s2:checked ~ #slide3,
+           #s3:checked ~ #slide4,
+            #s4:checked ~ #slide5,
+             #s5:checked ~ #slide1 {
+           box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+           transform: translate3d(20%, 0, -100px);
+         }
+         
+         
+         /* Next to Next Slide */
+         #s1:checked ~ #slide3,
+          #s2:checked ~ #slide4,
+           #s3:checked ~ #slide5,
+            #s4:checked ~ #slide1,
+             #s5:checked ~ #slide2 {
+           box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+           transform: translate3d(40%, 0, -250px);
+         }
+         
+         /* Previous to Previous Slide */
+         #s1:checked ~ #slide4,
+          #s2:checked ~ #slide5,
+           #s3:checked ~ #slide1,
+            #s4:checked ~ #slide2,
+             #s5:checked ~ #slide3 {
+           box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+           transform: translate3d(-40%, 0, -250px);
+         }
+         
+         /* Previous Slide */
+         #s1:checked ~ #slide5,
+          #s2:checked ~ #slide1,
+           #s3:checked ~ #slide2,
+            #s4:checked ~ #slide3,
+             #s5:checked ~ #slide4 {
+           box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+           transform: translate3d(-20%, 0, -100px);
+         }
+         
+         
+           </style>
    </head>
    <body>
        
@@ -50,7 +166,7 @@
                         <nav class="menu-box">
                            <ul class="nav-menu"  id="mobile-menu">
                               <li><a href="index.html">Home</a></li>
-                              <li><a href="gallery.html">Gallary</a></li>
+                             
                               <li class="dropdown">
                                  <a href="javascript:;">Research</a>
                                  <ul>
@@ -96,7 +212,7 @@
                                  </ul>
                               </li>
                               
-                                 
+                              <li><a href="gallery.html">Gallary</a></li>   
                               <li><a href="contact.html">Contact as</a></li>
                            </ul>
                         </nav>
@@ -154,7 +270,21 @@
          </div>
       </section>
       <!-- Hero Section End -->
-       
+      
+       <section id="slider">
+         
+  <input type="radio" name="slider" id="s1" checked>
+  <input type="radio" name="slider" id="s2">
+  <input type="radio" name="slider" id="s3">
+  <input type="radio" name="slider" id="s4">+
+  <input type="radio" name="slider" id="s5">
+
+  <label for="s1" id="slide1"><img src="st/g12.JPG" alt=""></label>
+  <label for="s2" id="slide2"><img src="st/gk.jpg" alt=""></label>
+  <label for="s3" id="slide3"><img src="st/g14.JPG" alt=""></label>
+  <label for="s4" id="slide4"><img src="st/g13.JPG" alt=""></label>
+  <label for="s5" id="slide5"><img src="st/g11.JPG" alt=""></label>
+</section>
        
       <!-- Companies Section Start -->
       <section class="companies-section section_b_70 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
@@ -344,7 +474,7 @@
                <div class="col-lg-6 col-md-12 col-sm-12">
                   <div class="choose-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
                      <div class="section-title">
-                        <h2>Our <span>Expart Lab Student</span> <br>Have Special Skills</h2>
+                        <h2>Our <span>Expert Lab Students</span> <br>Have Special Skills</h2>
                      </div>
                      <p>The data science learning goals of lab experiences include enhancing mastery of data science subject matter, developing Statistical analize, increasing understanding of the Real life data complexity and ambiguity of empirical work</p>
                      <ul>
@@ -365,7 +495,7 @@
                               <div class="choose-icon">
                                  <i class="fa fa-users"></i>
                               </div>
-                              <h2><span class="counter">500</span>+</h2>
+                              <h2><span class="counter">700</span>+</h2>
                               <p>Students</p>
                               <div class="choose-icon-bottom">
                                  <i class="fa fa-users"></i>
@@ -673,6 +803,27 @@
       <script src="assets/js/wow.min.js"></script>
       <!--Main js-->
       <script src="assets/js/main.js"></script>
+      <script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slider");
+  let radio = document.getElementsByClassName("slider");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < radio.length; i++) {
+   radio[i].className = radio[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  radio[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
    </body>
 
 <!-- Mirrored from themescare.com/demos/robofume-view/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 May 2021 19:05:47 GMT -->

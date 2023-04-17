@@ -5142,3 +5142,13 @@ aside .widget:last-child {
 	text-align: center
 }
 
+..center {
+    width:auto;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    position:absolute;
+    left:50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+}
