@@ -27,14 +27,15 @@
       <link rel="stylesheet" href="assets/css/style.css">
       <!--Responsive css-->
       <link rel="stylesheet" href="assets/css/responsive.css">
+      
 
       <style media="screen">
 
 
          #slider {
            position: relative;
-           width: 50%;
-           height: 32vw;
+           width: 40%;
+           height: 26vw;
            margin: 150px auto;
            font-family: 'Helvetica Neue', sans-serif;
            perspective: 1400px;
@@ -212,7 +213,7 @@
                                  </ul>
                               </li>
                               
-                              <li><a href="gallery.html">Gallary</a></li>   
+                              <li><a href="gallery.html">Gallery</a></li>   
                               <li><a href="contact.html">Contact as</a></li>
                            </ul>
                         </nav>
@@ -270,21 +271,37 @@
          </div>
       </section>
       <!-- Hero Section End -->
-      
+      <div class="radiobuttons">
        <section id="slider">
-         
-  <input type="radio" name="slider" id="s1" checked>
-  <input type="radio" name="slider" id="s2">
-  <input type="radio" name="slider" id="s3">
-  <input type="radio" name="slider" id="s4">+
-  <input type="radio" name="slider" id="s5">
+            <input type="radio" name="slider" id="s1" checked>
+            <input type="radio" name="slider" id="s2">
+            <input type="radio" name="slider" id="s3">
+            <input type="radio" name="slider" id="s4">
+            <input type="radio" name="slider" id="s5">
 
-  <label for="s1" id="slide1"><img src="st/g12.JPG" alt=""></label>
-  <label for="s2" id="slide2"><img src="st/gk.jpg" alt=""></label>
-  <label for="s3" id="slide3"><img src="st/g14.JPG" alt=""></label>
-  <label for="s4" id="slide4"><img src="st/g13.JPG" alt=""></label>
-  <label for="s5" id="slide5"><img src="st/g11.JPG" alt=""></label>
-</section>
+            <label for="s1" id="slide1"><img src="st/g12.JPG" alt=""></label>
+            <label for="s2" id="slide2"><img src="st/gk.jpg" alt=""></label>
+            <label for="s3" id="slide3"><img src="st/g14.JPG" alt=""></label>
+            <label for="s4" id="slide4"><img src="st/g13.JPG" alt=""></label>
+            <label for="s5" id="slide5"><img src="st/g11.JPG" alt=""></label>
+      
+ 
+  <script>
+
+   var radiobuttons = document.querySelectorAll('.radiobuttons input');
+var currentCheckboxIndex = 0;
+
+function switchRadio() {
+radiobuttons[currentCheckboxIndex].checked = false;
+currentCheckboxIndex = (currentCheckboxIndex + 1) % radiobuttons.length;
+radiobuttons[currentCheckboxIndex].checked = true;
+}
+
+setInterval(switchRadio, 3000);
+
+   </script>
+         </section>
+      </div>
        
       <!-- Companies Section Start -->
       <section class="companies-section section_b_70 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
@@ -712,10 +729,36 @@
                            <div class="single-footer wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
                               <h3>CONTACT AS</h3>
                               <ul>
-                                 <li><a href="#">Mrs.M.Karthiga</a></li>
-                                 <li><a href="#">Assistant professor computer science engineering</a></li>
-                                 <li><span>Email:</span> <a href="mailto:karthigam@bitsathy.ac.in">karthigam@bitsathy.ac.in</a></li>
+                                 <li><span>Email:</span> <a href="mailto:datasciencelab@bitsathy.ac.in">datasciencelab@bitsathy.ac.in</a></li>
                            <li><span>Phone:</span> <a href="tel:+91 9789483696">+91 9789483696</a></li>
+                           <div>
+                              <br>
+                           <li>
+                              <span><a href="https://www.facebook.com/profile.php?id=100091504275175" target="_blank">
+                              <i class="fa fa-facebook"style="font-size: 25px;"></i>
+                              </a></span><span></span>
+                              <span></span>
+                           
+                              <span><a href="https://twitter.com/bit_ds_lab" target="_blank">
+                              <i class="fa fa-twitter"style="font-size: 25px;"></i>
+                              </a></span>
+                              <span></span>
+                              <span></span>
+                              <span><a href="https://www.linkedin.com/in/datascince-lab-413524271/" target="_blank">
+                              <i class="fa fa-linkedin" style="font-size: 25px;"></i>
+                              </a></span>
+                              <span></span>
+                              <span></span>
+                           
+                              <span><a href="https://www.instagram.com/bit_datascience_lab/" target="_blank">
+                              <i class="fa fa-instagram"style="font-size: 25px;"></i>
+                              </a></span>
+                              <span></span>
+                              <span></span>
+                              <span><a href="https://www.youtube.com/channel/UCXsSJasZccbiOaQeh8MqRRQ" target="_blank">
+                                 <i class="fa fa-youtube"style="font-size: 25px;"></i>
+                                 </a></span>
+                           </li></div>
                               </ul>
                            </div>
                         </div>
